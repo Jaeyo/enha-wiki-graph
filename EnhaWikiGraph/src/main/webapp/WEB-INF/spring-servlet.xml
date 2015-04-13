@@ -27,12 +27,13 @@
 	</bean>
 
 	<!-- service -->
-	<bean id="testService" class="org.jaeyo.service.impl.TestServiceImpl" />
 	<bean id="wikiDocService" class="org.jaeyo.service.impl.WikiDocServiceImpl" />
+	<bean id="wikiDocEdgesService" class="org.jaeyo.service.impl.WikiDocEdgesServiceImpl" />
 	
-	<!-- repository 
-	<bean id="wikiDocRepository" class="org.jaeyo.repo.impl.WikiDocRepositoryImplTest" />
-	-->
+	<!-- repository -->
+	<bean id="wikiDocRepository" class="org.jaeyo.repo.impl.WikiDocRepositoryImpl" />
+	<bean id="wikiDocEdgesRepository" class="org.jaeyo.repo.impl.WikiDocEdgesRepositoryImpl" />
+	<bean id="userViewRepository" class="org.jaeyo.repo.impl.UserViewRepositoryImpl" />
 	
 	<!-- connection pool-->
 	<bean id="connectionPool" class="org.jaeyo.rdb.impl.H2ConnectionPool" />
