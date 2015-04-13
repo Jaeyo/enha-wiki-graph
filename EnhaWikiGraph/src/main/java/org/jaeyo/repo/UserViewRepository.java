@@ -1,8 +1,11 @@
 package org.jaeyo.repo;
 
+import java.util.List;
+
 import org.jaeyo.model.UserView;
+import org.jaeyo.model.WikiDoc;
 
 public interface UserViewRepository {
-	public void save(UserView userView);
-	public void loadBySessionId(String sessionId);
+	public boolean save(UserView userView);
+	public List<WikiDoc> loadBySessionId(String sessionId);
 }

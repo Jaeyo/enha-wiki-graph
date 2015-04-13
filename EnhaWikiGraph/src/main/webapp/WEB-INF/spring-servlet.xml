@@ -30,6 +30,10 @@
 	<bean id="testService" class="org.jaeyo.service.impl.TestServiceImpl" />
 	<bean id="wikiDocService" class="org.jaeyo.service.impl.WikiDocServiceImpl" />
 	
-	<!-- repository -->
+	<!-- repository 
 	<bean id="wikiDocRepository" class="org.jaeyo.repo.impl.WikiDocRepositoryImplTest" />
+	-->
+	
+	<!-- connection pool-->
+	<bean id="connectionPool" class="org.jaeyo.rdb.impl.H2ConnectionPool" />
 </beans>

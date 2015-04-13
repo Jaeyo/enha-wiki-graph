@@ -1,20 +1,19 @@
 package org.jaeyo.model;
 
-import java.sql.Date;
-import java.util.List;
+import java.util.Date;
 
 public class UserView {
 	private String sessionId;
 	private Date lastUpdated;
-	private String viewedWikiDocsTitle;
+	private String wikiDocTitle;
 
 	public UserView() {
 	}
 
-	public UserView(String sessionId, Date lastUpdated, String viewedWikiDocsTitle) {
+	public UserView(String sessionId, Date lastUpdated, String wikiDocTitle) {
 		this.sessionId = sessionId;
 		this.lastUpdated = lastUpdated;
-		this.viewedWikiDocsTitle = viewedWikiDocsTitle;
+		this.wikiDocTitle = wikiDocTitle;
 	}
 
 	public String getSessionId() {
@@ -33,11 +32,11 @@ public class UserView {
 		this.lastUpdated = lastUpdated;
 	}
 
-	public String getViewedWikiDocsTitle() {
-		return viewedWikiDocsTitle;
+	public String getWikiDocTitle() {
+		return wikiDocTitle;
 	}
 
-	public void setViewedWikiDocsTitle(String viewedWikiDocsTitle) {
-		this.viewedWikiDocsTitle = viewedWikiDocsTitle;
+	public void setWikiDocTitle(String wikiDocTitle) {
+		this.wikiDocTitle = wikiDocTitle;
 	}
 } // class

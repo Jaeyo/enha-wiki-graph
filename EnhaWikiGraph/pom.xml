@@ -17,6 +17,12 @@
 	</repositories>
 
 	<dependencies>
+		<!-- h2 database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.187</version>
+		</dependency>
 
 		<!-- spring -->
 		<dependency>
@@ -60,12 +66,12 @@
 			<version>1.7.4</version>
 		</dependency>
 
-<!--  MIrror for reflection -->
-<dependency>
-	<groupId>net.vidageek</groupId>
-	<artifactId>mirror</artifactId>
-	<version>1.6.1</version>
-</dependency>
+		<!-- Mirror for reflection -->
+		<dependency>
+			<groupId>net.vidageek</groupId>
+			<artifactId>mirror</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 
 		<!-- Logging -->
 		<dependency>
