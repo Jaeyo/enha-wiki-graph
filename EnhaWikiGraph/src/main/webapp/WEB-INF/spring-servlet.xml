@@ -26,5 +26,10 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
+	<!-- service -->
 	<bean id="testService" class="org.jaeyo.service.impl.TestServiceImpl" />
+	<bean id="wikiDocService" class="org.jaeyo.service.impl.WikiDocServiceImpl" />
+	
+	<!-- repository -->
+	<bean id="wikiDocRepository" class="org.jaeyo.repo.impl.WikiDocRepositoryImplTest" />
 </beans>

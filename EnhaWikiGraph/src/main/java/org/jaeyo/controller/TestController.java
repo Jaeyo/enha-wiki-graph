@@ -4,6 +4,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 import org.jaeyo.service.TestService;
+import org.jaeyo.service.WikiDocService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -15,13 +16,17 @@ import org.springframework.web.servlet.ModelAndView;
 public class TestController {
 	private static final Logger logger=LoggerFactory.getLogger(TestController.class);
 	
-	@Inject
-	private TestService testService;
+	@Inject private TestService testService;
+	@Inject private WikiDocService wikiDocService;
 	
 	@RequestMapping(value="/test", method = RequestMethod.GET)
 	public ModelAndView home(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView("test");
-		mv.addObject("testword", testService.getTestWord());
+		StringBuilder testWordSb = new StringBuilder();
+		testWordSb.append("wikidoc save : ").append(wikiDocService.save(null)).append("\n");
+		testWordSb.append("wikidoc isExists : ").append(wikiDocService.isExists("test")).append("\n");
+		testWordSb.append("wikidoc load : ").append(wikiDocService.load("test").getContentHtml()).append("\n");
+		mv.addObject("testword", testWordSb.toString());
 		return mv;
 	} //home
 	
