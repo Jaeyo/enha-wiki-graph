@@ -60,6 +60,13 @@
 			<version>1.7.4</version>
 		</dependency>
 
+<!--  MIrror for reflection -->
+<dependency>
+	<groupId>net.vidageek</groupId>
+	<artifactId>mirror</artifactId>
+	<version>1.6.1</version>
+</dependency>
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>log4j</groupId>
