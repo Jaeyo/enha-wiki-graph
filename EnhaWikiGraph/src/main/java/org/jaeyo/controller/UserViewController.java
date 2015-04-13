@@ -2,11 +2,9 @@ package org.jaeyo.controller;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 import org.jaeyo.model.WikiDoc;
-import org.jaeyo.repo.UserViewRepository;
 import org.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserViewController {
 	private static final Logger logger=LoggerFactory.getLogger(UserViewController.class);
-	
-	@Inject private UserViewRepository userViewRepo;
 	
 	@RequestMapping(value="/UserView", method = RequestMethod.GET)
 	public @ResponseBody String getUserView(HttpServletRequest request){

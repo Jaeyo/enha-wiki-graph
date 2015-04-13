@@ -29,6 +29,7 @@
 	<!-- service -->
 	<bean id="wikiDocService" class="org.jaeyo.service.impl.WikiDocServiceImpl" />
 	<bean id="wikiDocEdgesService" class="org.jaeyo.service.impl.WikiDocEdgesServiceImpl" />
+	<bean id="userViewService" class="org.jaeyo.service.impl.UserViewServiceImpl" />
 	
 	<!-- repository -->
 	<bean id="wikiDocRepository" class="org.jaeyo.repo.impl.WikiDocRepositoryImpl" />
